@@ -2,59 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Мини Сайт</title>
+    <title>Document</title>
     <style>
-        .vis{
-            left: 0;
+        @keyframes cpos {
+            0% {
+                transform: rotate(0) translate(100px, 100px) ;
+                background: #102bf7;
+            }
+            25% {
+                transform:  rotate(90deg) translate(100px, 100px);
+                background: #00ff45;
+            }
+            50% {
+                transform: rotate(180deg) translate(100px, 100px) ;
+                background: #ff0000;
+            }
+            75% {
+                transform:  rotate(270deg) translate(100px, 100px);
+                background: #9300ff;
+            }
+            100% {
+                transform: rotate(360deg) translate(100px, 100px) ;
+                background: #000;
+            }
         }
-            button{
-            position: absolute;
-            top: 20px;
-            right: -100px;
-        }
-        button{
-            position: absolute;
-            top: 20px;
-            right: -100px;
-        }
-        a{
-            color:darkorange;
-        }
-        body{
-            background-color: #a2f8f5;
-        }
-        image{
+        
+        .b {
             width: 100px;
+            height: 100px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            left:50vw;
+            top:50vh;
         }
-        nav{
-            width: 500px;
-            color:darkgoldenrod;
-            left: 0;
-            width: 0;
-            background-color:bisque;
-            
+        
+        .anim1 {
+            animation: cpos 10s infinite  linear;
+            background: #000;
+        }
+        
+        .anim2 {
+            animation: cpos 10s infinite  linear -2s;
+            background: #102bf7;
+        }
+        
+        .anim3 {
+            animation: cpos 10s infinite  linear -4s ;
+            background: #00ff45;
+        }
+        
+        .anim4 {
+            animation: cpos 10s infinite  linear -6s ;
+            background: #ff0000;
+        }
+        
+        .anim5 {
+            animation: cpos 10s infinite  linear -8s ;
+            background: #9300ff;
         }
     </style>
 </head>
+
 <body>
-   <header>
-       <h1>cсайт</h1>
-       <nav>
-           <ul>
-               <li><a href="rrr">Начало</a></li>
-           </ul>
-           <button id="hide">Открыть</button>
-       </nav>
-   </header>
-    <main>
-        <article id="rrr">
-        <image src="http://auto.ferrari.com/en_EN/wp-content/uploads/sites/5/2013/07/Ferrari-FF-front-end-960x540.jpg"> </image>
-        </article>
-    </main>
-        <script>
-        hide.addEventListener('click', function(){
-            menu.classList.toggle('vis');
-        });
-    </script>
+    <div class="b anim1"></div>
+    <div class="b anim2"></div>
+    <div class="b anim3"></div>
+    <div class="b anim4"></div>
+    <div class="b anim5"></div>
+
 </body>
 </html>
